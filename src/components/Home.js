@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
-    return(
-        <div>
-            <h1>Welcome!</h1>
-        </div>
-    );
+  const executives = useSelector((state) => state.data);
+
+  useEffect(() => {
+    fetchExecutives();
+  }, []);
+
+  console.log("Data :", data);
+
+  return (
+    <div>
+      <ExecutiveComponent />
+    </div>
+  );
 };
 
 export default Home;
+ 
