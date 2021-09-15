@@ -32,22 +32,6 @@ const filterByGender = (payload) => ({
   payload,
 });
 
-// const fetchProducts = async () => {
-//   const response = await axios
-//     .get("https://fakestoreapi.com/products")
-//     .catch((err) => {
-//       console.log("Err: ", err);
-//     });
-//   dispatch(setProducts(response.data));
-// };
-
-// export const fetchData = () => async (dispatch) => {
-//     dispatch({ type: GET_DATA });
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     return dispatch({ type: GET_DATA_SUCCESS, data });
-//   };
-
 export const fetchExecutives = () => (dispatch) => {
   dispatch(getDataRequest);
   axios.get(url)
@@ -55,12 +39,12 @@ export const fetchExecutives = () => (dispatch) => {
       const newData = response.data;
       const data = newData.map((executive) => ({
         title: executive.title,
-      name: executive.name,
-      pay: executive.pay,
-      currencyPay: executive.currencyPay,
-      gender: executive.gender,
-      yearBorn: executive.yearBorn,
-      titleSince: executive.titleSince,
+        name: executive.name,
+        pay: executive.pay,
+        currencyPay: executive.currencyPay,
+        gender: executive.gender,
+        yearBorn: executive.yearBorn,
+        titleSince: executive.titleSince,
 
       }));
       dispatch(getDataSuccess(data));
@@ -74,22 +58,22 @@ export const fetchExecutives = () => (dispatch) => {
 export const fetchDetail = () => (dispatch) => {
   dispatch(getDataRequest);
   axios.get(url)
-  .then((response) => {
-    const newData = response.data;
-    const data = newData.map((executive) => ({
-      title: executive.title,
-      name: executive.name,
-      pay: executive.pay,
-      currencyPay: executive.currencyPay,
-      gender: executive.gender,
-      yearBorn: executive.yearBorn,
-      titleSince: executive.titleSince,
+    .then((response) => {
+      const newData = response.data;
+      const data = newData.map((executive) => ({
+        title: executive.title,
+        name: executive.name,
+        pay: executive.pay,
+        currencyPay: executive.currencyPay,
+        gender: executive.gender,
+        yearBorn: executive.yearBorn,
+        titleSince: executive.titleSince,
       }));
-      dispatch(getCurrencySuccess(data));
+      dispatch(getDataSuccess(data));
     })
     .catch((error) => {
       const errorMsg = error.message;
-      dispatch(getCurrencyFailure(errorMsg));
+      dispatch(getDataFailure(errorMsg));
     });
 };
 
@@ -104,6 +88,15 @@ const filter = (data, value) => {
   }
   return result;
 };
+
+/* eslint-disable react/prop-types */
+export const Filter = ({ handleSelection }) => (
+  <select onChange={(e) => handleSelection(e)} className="Filter">
+    <option value="all">All</option>
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+  </select>
+);
 
 const initialState = {
   data: [],
@@ -125,19 +118,22 @@ const executiveReducer = (state = initialState, action) => {
     case GET_DATA:
       return { ...state, loading: true };
     case GET_DATA_SUCCESS:
-      return { ...state, data: action.payload, loading: false };
+      return { ...state, data: action.payload, loading: true };
     case GET_DATA_FAILURE:
-      return { loading: false, data: [], error: action.payload, };
+      return { loading: false, data: [], error: action.payload };
     case FILTER_BY_GENDER:
-      return { ...state, value: action.payload.value, data: action.payload.data, 
-        filter: filter(action.payload.data, action.payload.value) };
+      return {
+        ...state,
+        value: action.payload.value,
+        data: action.payload.data,
+        filter: filter(action.payload.data, action.payload.value),
+      };
     case DETAIL_PAGE_SUCCESS:
       return { ...state, home: action.payload };
-    
+
     default:
       return state;
   }
-
 };
 
 export { executiveReducer as default, filterByGender };
