@@ -1,14 +1,11 @@
-import { applyMiddleware, createStore, combineReducers } from 'redux';
-import ReduxThunk from 'redux-thunk';
-import covidReducer from './covid/covid';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import executiveReducer from './executives';
 
-const reducers = combineReducers({
-  covid: covidReducer,
+export const reducer = combineReducers({
+  executive: executiveReducer,
 });
 
-const store = createStore(
-  reducers,
-  applyMiddleware(ReduxThunk),
-);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;

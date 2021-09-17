@@ -1,0 +1,47 @@
+.executive {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.executive-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.executive-picture {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+
+  .Arrow {
+    align-self: flex-end;
+    font-size: 25px;
+  }
+
+  .Symbol {
+    display: flex;
+    height: 100%;
+    padding-top: 20px;
+    align-items: center;
+    align-self: center;
+    font-size: 10px;
+
+    p {
+      color: #fff;
+      font-size: 33px;
+      font-weight: bold;
+    }
+  }
+}
+
+.executive-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 18px;
+}
