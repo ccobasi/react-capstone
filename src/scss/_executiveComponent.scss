@@ -1,4 +1,4 @@
-.Currency {
+.executive {
   list-style: none;
 
   a {
@@ -6,22 +6,15 @@
   }
 }
 
-.Currency-Container {
+.executive-container {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  // background-color: #fb5092;
 }
 
-// .Currency-Container:nth-of-type(2n + 1) {
-//     background-color: lightgray;
-//   }
-
-.Currency-Picture {
+.executive-picture {
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // text-align: center;
   height: 100px;
   width: 100%;
 
@@ -38,14 +31,14 @@
     align-self: center;
 
     p {
-      color: #992e58;
+      color: #fff;
       font-size: 33px;
       font-weight: bold;
     }
   }
 }
 
-.Currency-Name {
+.executive-name {
   display: flex;
   flex-direction: column;
   align-items: flex-end;

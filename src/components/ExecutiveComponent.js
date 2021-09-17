@@ -14,7 +14,7 @@ const ExecutiveComponent = ({ executive }) => {
   } = executive;
 
   return (
-    <li className="Currency">
+    <li className="executive">
       <Link
         key={title}
         to={`/details/${title}`}
@@ -23,14 +23,14 @@ const ExecutiveComponent = ({ executive }) => {
         }}
         value={title}
       >
-        <div className="Currency-Container">
-          <div className="Currency-Picture">
+        <div className="executive-container">
+          <div className="executive-picture">
             <FiArrowRightCircle className="Arrow" />
             <div className="Symbol">
               <p>{title}</p>
             </div>
           </div>
-          <div className="Currency-Name">
+          <div className="executive-name">
             <h2>{name}</h2>
             <h3>{pay}</h3>
             <p>{gender}</p>

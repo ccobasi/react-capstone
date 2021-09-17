@@ -1,20 +1,12 @@
 .Header-Container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: #fb5092;
-}
+  width: 100%;
+  padding: 5px;
+  background-color: #5788e4;
 
-.Header-Picture {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  text-align: center;
-}
-
-.Header-Picture img {
-  width: 100px;
-}
-
-.Header-Name {
-  align-items: center;
+  .Mic {
+    margin-right: 20px;
+  }
 }

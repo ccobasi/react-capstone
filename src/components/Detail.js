@@ -5,7 +5,7 @@ const Detail = ({ executive }) => {
   } = executive;
 
   return (
-    <ul className="Stat-Container">
+    <ul className="Detail-Container">
       <li>
         <h2>Title</h2>
         <p>{title}</p>

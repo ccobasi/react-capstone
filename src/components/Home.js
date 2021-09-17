@@ -36,12 +36,12 @@ function Home() {
         </div>
       </div>
       <div>
-        <div className="Currency-Stats">
-          <h4 className="Currency-Stats1">Filter By Gender</h4>
+        <div className="executive-details">
+          <h4 className="executive-details1">Filter By Gender</h4>
           <Filter handleSelection={handleSelection} />
         </div>
         {executiveStatus}
-        <ul className="Currencies">
+        <ul className="home">
           {renderedItems.map((executive) => (
             <ExecutiveComponent key={executive.title} executive={executive} />
           ))}

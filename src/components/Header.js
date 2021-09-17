@@ -17,9 +17,9 @@ const Header = () => {
 const Heading = ({ home }) => {
   if (!home) {
     return (
-      <div className="NavBar-Container">
+      <div className="Header-Container">
         <p>2021</p>
-        <p className="NavBar-Title">Top Executives</p>
+        <p className="Header-Title">Top Executives</p>
         <div>
           <i className="Mic"><FaMicrophone /></i>
           <i><FaCog /></i>
@@ -28,7 +28,7 @@ const Heading = ({ home }) => {
     );
   }
   return (
-    <div className="NavBar-Container">
+    <div className="Header-Container">
       <p>
         <NavLink to="/">
           <FaAngleLeft />
