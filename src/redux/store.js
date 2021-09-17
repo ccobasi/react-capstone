@@ -1,15 +1,11 @@
-import { applyMiddleware, createStore, combineReducers } from 'redux';
-import logger from 'redux-logger';
-import ReduxThunk from 'redux-thunk';
-import executiveReducer from './executive/executives';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import executiveReducer from './executives';
 
-const reducers = combineReducers({
-  data: executiveReducer,
+export const reducer = combineReducers({
+  executive: executiveReducer,
 });
 
-const store = createStore(
-  reducers,
-  applyMiddleware(ReduxThunk, logger),
-);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;
