@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-capstone/static/css/main.39fe5777.chunk.css",
-    "main.js": "/react-capstone/static/js/main.0f8beb15.chunk.js",
-    "main.js.map": "/react-capstone/static/js/main.0f8beb15.chunk.js.map",
+    "main.css": "/react-capstone/static/css/main.43ac727a.chunk.css",
+    "main.js": "/react-capstone/static/js/main.276d9240.chunk.js",
+    "main.js.map": "/react-capstone/static/js/main.276d9240.chunk.js.map",
     "runtime-main.js": "/react-capstone/static/js/runtime-main.ce0a1b4f.js",
     "runtime-main.js.map": "/react-capstone/static/js/runtime-main.ce0a1b4f.js.map",
     "static/js/2.54bdd395.chunk.js": "/react-capstone/static/js/2.54bdd395.chunk.js",
     "static/js/2.54bdd395.chunk.js.map": "/react-capstone/static/js/2.54bdd395.chunk.js.map",
     "index.html": "/react-capstone/index.html",
-    "static/css/main.39fe5777.chunk.css.map": "/react-capstone/static/css/main.39fe5777.chunk.css.map",
+    "static/css/main.43ac727a.chunk.css.map": "/react-capstone/static/css/main.43ac727a.chunk.css.map",
     "static/js/2.54bdd395.chunk.js.LICENSE.txt": "/react-capstone/static/js/2.54bdd395.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ce0a1b4f.js",
     "static/js/2.54bdd395.chunk.js",
-    "static/css/main.39fe5777.chunk.css",
-    "static/js/main.0f8beb15.chunk.js"
+    "static/css/main.43ac727a.chunk.css",
+    "static/js/main.276d9240.chunk.js"
   ]
 }
