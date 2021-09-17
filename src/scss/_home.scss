@@ -29,7 +29,6 @@
 .home {
   display: grid;
   grid-template-columns: 50% 50%;
-  //   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
   li:nth-child(8n-7) {
     background-color: #6896eb;

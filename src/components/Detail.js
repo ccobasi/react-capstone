@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import { PropTypes } from 'prop-types';
+
 const Detail = ({ executive }) => {
   const {
     title, pay, name, gender, yearBorn,
@@ -29,5 +30,13 @@ const Detail = ({ executive }) => {
     </ul>
   );
 };
+
+Detail.propTypes = {
+  title: PropTypes.any,
+  pay: PropTypes.any,
+  name: PropTypes.any,
+  gender: PropTypes.any,
+  yearBorn: PropTypes.any,
+}.isRequired;
 
 export default Detail;

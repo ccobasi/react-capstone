@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { PropTypes } from 'prop-types';
 import Detail from './Detail';
 import { fetchExecutive, detailPageSuccess } from '../redux/executives';
 
-/* eslint-disable react/prop-types */
 const Details = ({ match }) => {
   const executives = useSelector((state) => state.executive.executive);
   const dispatch = useDispatch();
@@ -47,5 +47,13 @@ const Details = ({ match }) => {
     </div>
   );
 };
+
+Details.propTypes = {
+  title: PropTypes.any,
+  pay: PropTypes.any,
+  name: PropTypes.any,
+  gender: PropTypes.any,
+  yearBorn: PropTypes.any,
+}.isRequired;
 
 export default Details;

@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import '../scss/style.scss';
 import { FaAngleLeft, FaMicrophone, FaCog } from 'react-icons/fa';
 
@@ -13,7 +14,6 @@ const Header = () => {
   );
 };
 
-/* eslint-disable react/prop-types */
 const Heading = ({ home }) => {
   if (!home) {
     return (
@@ -42,5 +42,13 @@ const Heading = ({ home }) => {
     </div>
   );
 };
+
+Heading.propTypes = {
+  title: PropTypes.any,
+  pay: PropTypes.any,
+  name: PropTypes.any,
+  gender: PropTypes.any,
+  yearBorn: PropTypes.any,
+}.isRequired;
 
 export default Header;
