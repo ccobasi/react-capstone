@@ -10,6 +10,7 @@ This Web application is about building a mobile web application to check a list 
 ## :red_circle: Live Demo and Explaining Video
 
 - [Github](https://ccobasi.github.io/react-capstone/#/) 
+- [Loom](https://www.loom.com/share/d344ad6144cf427cb3deeeef8758bf0b)
 
 
 ## :hammer: Built With

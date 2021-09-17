@@ -26,7 +26,7 @@ const ExecutiveComponent = ({ executive }) => {
         <div className="executive-container">
           <div className="executive-picture">
             <FiArrowRightCircle className="Arrow" />
-            <div className="Symbol">
+            <div className="executive-name">
               <p>{title}</p>
             </div>
           </div>
